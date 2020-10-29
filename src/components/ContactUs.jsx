@@ -7,7 +7,7 @@ export default class ContactUs extends Component {
             <>
                 <Row className="justify-content-center">
                     <Col md={8} lg={10} className="col-12 pb-5 mt-3">
-                        <Form action="mail.php" method="post">
+                        <Form action="localhost:3000/api/modulos/nuevo-modulo" method="post">
                             <Card className="border-primary rounded-0">
                                 <Card.Header className="p-0">
                                     <div className="bg-info text-white text-center py-2">
@@ -33,7 +33,14 @@ export default class ContactUs extends Component {
                                             <FormControl type="email" placeholder="ejemplo@gmail.com" name="email" required />
                                         </InputGroup>
                                     </Form.Group>
-                                    
+                                    <Form.Group>
+                                        <InputGroup>
+                                            <InputGroup.Prepend>
+                                                <InputGroup.Text><i className="fa fa-phone text-info"></i></InputGroup.Text>
+                                            </InputGroup.Prepend>
+                                            <FormControl type="text" placeholder="+57 30045533" name="telefono" required />
+                                        </InputGroup>
+                                    </Form.Group>
                                     <Form.Group>
                                         <InputGroup>
                                             <InputGroup.Prepend>
